@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="upload.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+  <title>Upload</title>
+</head>
+<body>
+  <form action="handleUpload.php" method="post" enctype="multipart/form-data" name="uploadForm" class="upload">
+    <header>
+      <h1>Upload Files</h1>
+      <img src="uploads/images/upload.png" alt="upload" width="52px" height="auto">
+    </header>
+    <label for="fileToUpload">
+      Select file or multi files to upload: 
+    </label>
+    <input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
+    <label for="targetdir">Please choose directory</label>
+    <input type="text" list="directory" name="directory" required>
+    <datalist id="directory">
+      <option value="uploads/images/">uploads/images</option>
+      <option value="uploads/">uploads</option>
+      <option value="uploads/others/">upload/others</option>
+    </datalist>
+    <ol id="listFile">
+    </ol>
+    <input type="button" value="Display Directory and Files" id="showDir">
+    <input type="submit" name ="submit" id="btnUpload">
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

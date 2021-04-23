@@ -1,0 +1,90 @@
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*{
+  box-sizing: inherit;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+}
+.upload{
+  border-radius: 25px;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+.upload header{
+  border-radius: 5px;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #99d066;
+  padding: 0 5px;
+  height: 100px;
+  position: relative;
+  margin-bottom: 60px;
+}
+header img{
+  padding: 5px;
+  position: absolute;
+  background-color:antiquewhite ;
+  border-radius: 50%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.upload label{
+  font-size: 2rem;
+}
+.upload input[type=file]{
+  background-color: chartreuse;
+}
+#listFile{
+  margin: 10px 10px;
+  padding: 0;
+}
+#listFile li{
+  font-size: 1.6rem;
+}
+li .file-name{
+  color: #4d82cb;
+}
+li .file-type{
+  color: #99d066;
+}
+li .file-size{
+  color: #fbc02d;
+}
+#btnUpload{
+  background-color: #f44336;
+  outline: none;
+  border: none;
+  height: 50px;
+  transition: all 0.3s;
+}
+#btnUpload:hover{
+  opacity: 0.8;
+}
+#btnUpload:active{
+  border:1px outset black ;
+}
+#showDir{
+  background-color: green;
+  border: none;
+  outline: none;
+  padding: 5px 0;
+  margin: 5px 0;
+  color: white;
+}
+#showDir:hover{
+  opacity: 0.8;
+}
+@media only screen and (max-width: 480px){
+  .upload{
+    width: 100%;
+  }
+  
+}
