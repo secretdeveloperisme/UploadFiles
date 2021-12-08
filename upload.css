@@ -49,10 +49,18 @@ header img{
 #listFile li{
   font-size: 1.6rem;
 }
+li span{
+  display: inline-block;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 li .file-name{
   color: #4d82cb;
 }
 li .file-type{
+  max-width: 100px;
   color: #99d066;
 }
 li .file-size{
