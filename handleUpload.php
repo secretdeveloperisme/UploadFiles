@@ -1,6 +1,11 @@
 <?php
   if(isset($_POST["submit"])){
     $targetDir = $_POST["directory"];
+    if(!is_dir($targetDir)){
+      $targetDir="uploads/".$targetDir."/" ;
+      mkdir($targetDir,0775,true);
+    }
+      
     $numberOfFile = count($_FILES["fileToUpload"]["name"]);
     for($i = 0; $i < $numberOfFile; $i++){
       $targeFile = $targetDir.basename($_FILES["fileToUpload"]["name"][$i]);
