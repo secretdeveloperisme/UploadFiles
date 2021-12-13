@@ -13,4 +13,17 @@ $(function(){
   $("#showDir").click((event)=>{
     window.location = "showFiles.php"
   })
+  $.ajax({
+    url : "listFolder.php",
+    type : "GET",
+    dataType : "json",
+    success : (response)=>{
+      response = response
+      .map((value,index)=>{
+        return `<option value="${value}/">${value}</option>`
+      })
+      $("#directory").html(response.join("\n"))
+    }
+
+  })
 })
