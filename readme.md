@@ -2,7 +2,7 @@
 
 ## Features
 - upload multiple files 
-- list tree directory  of file
+- list tree directory of files
 - download files
 - delete file
 ## Manual
